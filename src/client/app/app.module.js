@@ -7,6 +7,7 @@
         'app.dashboard',
         'app.csrf',
         'app.clickjacking',
+        'app.xss-search',
         'app.layout'
     ]);
 
