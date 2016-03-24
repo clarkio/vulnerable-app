@@ -4,6 +4,7 @@
     angular.module('app', [
         'app.core',
         'app.widgets',
+        'app.csrf',
         'app.dashboard',
         'app.layout'
     ]);

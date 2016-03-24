@@ -1,14 +1,63 @@
 var router = require('express').Router();
 var four0four = require('./utils/404')();
 var data = require('./data');
+data.profile = {};
 
 router.get('/people', getPeople);
 router.get('/person/:id', getPerson);
+
+router.post('/user/login', login);
+router.post('/user/logout', logout);
+
+router.post('/user/profile/', updateProfile);
+router.get('/user/profile/', getProfile);
+
 router.get('/*', four0four.notFoundMiddleware);
 
 module.exports = router;
 
 //////////////
+
+function getProfile(req, res, next) {
+    console.log('User Requesting Read: ', req.cookies.userAuthToken);
+    console.log('Profile found: ', data.profile[req.cookies.userAuthToken])
+    res.status(200).send(data.profile[req.cookies.userAuthToken]);
+}
+
+function updateProfile(req, res, next) {
+    var user = req.cookies.userAuthToken;
+    console.log('User Requesting Update: ', user);
+    console.log('Updating user profile from: ', data.profile[user]);
+    console.log('Updating user profile to: ', req.body);
+    console.log('User Found: ', user);
+
+    data.profile[user] = req.body;
+    console.log('Updated profile for user: ', user);
+
+    res.status(200).send(data.profile[user]);
+}
+
+function login(req, res, next) {
+    var randomNumber = Math.random().toString();
+    randomNumber = randomNumber.substring(2, randomNumber.length);
+
+    data.randomNumber = randomNumber;
+    data.profile[randomNumber] = {
+        firstName: 'Jim',
+        lastName: 'Bob'
+    };
+
+    console.log('Logged in user: ', data.randomNumber);
+    res.cookie('userAuthToken', randomNumber, {maxAge: 3600000, path: '/'})
+    res.status(200).send(randomNumber);
+}
+
+function logout(req, res, next) {
+    console.log('Logged out user: ', data.randomNumber);
+    data.randomNumber = undefined;
+    res.clearCookie('userAuthToken');
+    res.status(200).send('logged out!');
+}
 
 function getPeople(req, res, next) {
     res.status(200).send(data.people);

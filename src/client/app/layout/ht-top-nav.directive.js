@@ -19,8 +19,56 @@
         };
 
         /* @ngInject */
-        function TopNavController() {
+        function TopNavController($rootScope, $timeout, userservice) {
             var vm = this;
+            vm.isLoggedIn = $rootScope.isLoggedIn;
+            vm.user;
+            vm.logout = logout;
+            vm.login = login;
+
+            activate();
+
+            function activate() {
+                login();
+            }
+
+            function logout() {
+                $rootScope.showSplash = true;
+                userservice.logout()
+                    .then(function(response) {
+                        $rootScope.isLoggedIn = false;
+                        vm.isLoggedIn = false;
+                        vm.user = undefined;
+                        console.log($rootScope.isLoggedIn);
+                        console.log(vm.isLoggedIn);
+                        hideSplash();
+                    })
+                    .catch(function(error) {
+                        console.log('ERROR: ', error);
+                    });
+            }
+
+            function login() {
+                $rootScope.showSplash = true;
+                userservice.login()
+                    .then(function(response) {
+                        $rootScope.isLoggedIn = true;
+                        vm.isLoggedIn = true;
+                        console.log('login response: ', response);
+                        vm.user = response;
+                        hideSplash();
+                    })
+                    .catch(function(error) {
+                        console.log('ERROR: ', error);
+                    })
+            }
+
+            function hideSplash() {
+                //Force a 1 second delay so we can see the splash.
+                $timeout(function() {
+                    $rootScope.showSplash = false;
+                }, 1000);
+            }
         }
 
         return directive;

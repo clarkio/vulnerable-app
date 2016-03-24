@@ -8,8 +8,14 @@
         </a>
     </div>
     <div class="navbar-collapse collapse">
-        <div class="pull-right navbar-logo">
-            
+        <div class="pull-left">
+            <div ng-show="vm.isLoggedIn">
+                <span class="user-title">{{vm.user}}</span>
+                <button ng-click="vm.logout()">Logout</button>
+            </div>
+            <div ng-show="!vm.isLoggedIn">
+                <button ng-click="vm.login()">Login</button>
+            </div>
         </div>
     </div>
 </nav>
