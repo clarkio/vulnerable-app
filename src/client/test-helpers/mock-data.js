@@ -2,7 +2,8 @@
 var mockData = (function() {
     return {
         getMockPeople: getMockPeople,
-        getMockStates: getMockStates
+        getMockStates: getMockStates,
+        getMockProfile: getMockProfile
     };
 
     function getMockStates() {
@@ -32,5 +33,12 @@ var mockData = (function() {
             {firstName: 'Landon', lastName: 'Gates', age: 11, location: 'South Carolina'},
             {firstName: 'Haley', lastName: 'Guthrie', age: 35, location: 'Wyoming'}
         ];
+    }
+
+    function getMockProfile() {
+        return {
+            firstName: 'Test',
+            lastName: 'Test'
+        };
     }
 })();
