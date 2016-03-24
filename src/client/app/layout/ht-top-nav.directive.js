@@ -22,7 +22,7 @@
         function TopNavController($rootScope, $timeout, userservice) {
             var vm = this;
             vm.isLoggedIn = $rootScope.isLoggedIn;
-            vm.user;
+            vm.user = undefined;
             vm.logout = logout;
             vm.login = login;
 
@@ -60,7 +60,7 @@
                     })
                     .catch(function(error) {
                         console.log('ERROR: ', error);
-                    })
+                    });
             }
 
             function hideSplash() {

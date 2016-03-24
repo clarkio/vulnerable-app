@@ -20,7 +20,7 @@ module.exports = router;
 
 function getProfile(req, res, next) {
     console.log('User Requesting Read: ', req.cookies.userAuthToken);
-    console.log('Profile found: ', data.profile[req.cookies.userAuthToken])
+    console.log('Profile found: ', data.profile[req.cookies.userAuthToken]);
     res.status(200).send(data.profile[req.cookies.userAuthToken]);
 }
 
@@ -48,7 +48,7 @@ function login(req, res, next) {
     };
 
     console.log('Logged in user: ', data.randomNumber);
-    res.cookie('userAuthToken', randomNumber, {maxAge: 3600000, path: '/'})
+    res.cookie('userAuthToken', randomNumber, {maxAge: 3600000, path: '/'});
     res.status(200).send(randomNumber);
 }
 

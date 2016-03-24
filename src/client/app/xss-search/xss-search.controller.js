@@ -11,7 +11,7 @@
         var vm = this;
         vm.title = 'XSS Search';
         vm.search = search;
-        vm.searchResults;
+        vm.searchResults = undefined;
 
         activate();
 

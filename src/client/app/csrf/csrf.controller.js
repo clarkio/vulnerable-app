@@ -11,8 +11,8 @@
         var vm = this;
         vm.title = 'CSRF';
         vm.user = {
-            firstName: "Test",
-            lastName: "Test"
+            firstName: 'Test',
+            lastName: 'Test'
         };
         vm.updateProfile = updateProfile;
         vm.getProfile = getProfile;
