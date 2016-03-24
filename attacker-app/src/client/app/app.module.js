@@ -5,6 +5,7 @@
         'app.core',
         'app.widgets',
         'app.dashboard',
+        'app.csrf-attack',
         'app.layout'
     ]);
 
