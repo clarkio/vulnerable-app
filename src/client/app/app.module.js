@@ -4,8 +4,9 @@
     angular.module('app', [
         'app.core',
         'app.widgets',
-        'app.csrf',
         'app.dashboard',
+        'app.csrf',
+        'app.clickjacking',
         'app.layout'
     ]);
 
