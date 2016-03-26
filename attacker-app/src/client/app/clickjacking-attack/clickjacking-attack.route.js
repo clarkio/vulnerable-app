@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.csrf')
+        .module('app.clickjacking-attack')
         .run(appRun);
 
     appRun.$inject = ['routerHelper'];
@@ -14,16 +14,16 @@
     function getStates() {
         return [
             {
-                state: 'csrf',
+                state: 'clickjacking',
                 config: {
-                    url: '/csrf',
-                    templateUrl: 'app/csrf/csrf.html',
-                    controller: 'CsrfController',
+                    url: '/',
+                    templateUrl: 'app/clickjacking-attack/clickjacking-attack.html',
+                    controller: 'ClickjackingController',
                     controllerAs: 'vm',
-                    title: 'CSRF',
+                    title: 'Clickjacking-Attack',
                     settings: {
                         nav: 1,
-                        content: '<i class="fa fa-csrf"></i> CSRF'
+                        content: '<i class="fa fa-clickjacking"></i> Clickjacking-Attack'
                     }
                 }
             }

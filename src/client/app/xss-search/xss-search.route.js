@@ -16,7 +16,7 @@
             {
                 state: 'xss-search',
                 config: {
-                    url: '/',
+                    url: '/xss-search',
                     templateUrl: 'app/xss-search/xss-search.html',
                     controller: 'XssSearchController',
                     controllerAs: 'vm',

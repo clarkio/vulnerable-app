@@ -6,6 +6,7 @@
         'app.widgets',
         'app.dashboard',
         'app.csrf-attack',
+        'app.clickjacking-attack',
         'app.layout'
     ]);
 

