@@ -54,6 +54,7 @@
                     .then(function(response) {
                         $rootScope.isLoggedIn = true;
                         vm.isLoggedIn = true;
+                        sessionStorage.setItem('userAuthToken', response);
                         console.log('login response: ', response);
                         vm.user = response;
                         hideSplash();
