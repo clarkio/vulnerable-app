@@ -30,21 +30,21 @@
             console.log('User Profile: ', JSON.stringify(user));
             userservice.updateProfile(user)
                 .then(function(response) {
-                    console.log('Successfully updated the user profile');
+                    logger.info('Successfully updated the user profile');
                 })
                 .catch(function(error) {
-                    console.log('There was an error updating the user profile: ', error);
+                    logger.error('There was an error updating the user profile: ', error);
                 });
         }
 
         function getProfile() {
             userservice.getProfile()
                 .then(function(response) {
-                    console.log('Received profile data: ', response);
+                    logger.info('Received profile data: ', response);
                     vm.user = response;
                 })
                 .catch(function(error) {
-                    console.log(error);
+                    logger.error(error);
                 });
         }
     }
