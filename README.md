@@ -1,4 +1,34 @@
-# vulnerable-app
+# vulnerable-app & attacker-app
+There are two applications within this repository that were generated from the HotTowel Angular generator. The main one is the `vulnerable-app` which is found in the `/src` folder. This application was built intentionally built out with vulnerabilities to easily demonstrate how they are performed by an attacker. The secondary application is the `attacker-app` found in the `/attacker-app` folder and it was built out to assist in demonstrating an attacker's website that is exploiting the vulnerabilities in the `vulnerable-app`.
+
+## How to Run Both Apps
+1. Open your terminal and `cd` to the root folder for this repository
+2. Run `gulp serve-dev` to spin up the `vulnerable-app`
+3. You should see your browser open up a new tab to the following URL: [http://localhost:3000](http://localhost:3000)
+4. Open a new terminal window or tab and `cd` to the `/attacker-app` folder from the root location of this repository
+5. Run `gulp serve-dev`
+6. You should see your browser open up another new tab to the following URL: [http://localhost:3002](http://localhost:3002)
+
+## How to Test
+
+### XSS
+The following steps will demonstrate a simple example of being able to escape the context of where the search input text is printed on screen and used to execute an injectable script that the browser will execute.
+
+1. In the tab that's running the `vulnerable-app`, click on the option `XSS-Search` in the navigation bar
+2. In the "Search" field enter the following text: `<script>alert('Malicious Script!');</script>`
+3. Click the "Submit" button
+4. You should see an alert message pop up on your screen with the message "Malicious Script!"
+
+### CSRF
+The following steps will demonstrate a simple example of being able to submit requests on behalf of the logged in user within the vulnerable-app, but executed from the `attacker-app`.
+
+1. TODO
+
+### Clickjacking
+
+1. TODO
+
+
 
 **Generated from HotTowel Angular**
 
