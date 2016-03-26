@@ -433,7 +433,7 @@ function serve(isDev, specRunner) {
     var debugMode = '--debug';
     var nodeOptions = getNodeOptions(isDev);
 
-    nodeOptions.nodeArgs = [debugMode + '=5858'];
+    nodeOptions.nodeArgs = [debugMode + '=5859'];
 
     if (args.verbose) {
         console.log(nodeOptions);
