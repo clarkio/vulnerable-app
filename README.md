@@ -40,7 +40,19 @@ The following steps will demonstrate a simple example of clickjacking by trickin
 
 This example demonstrates that while the user thinks they're clicking on a button that will show them "awesome dog backflips", they're actually clicking on the "Delete Sensitive Information!" button found in the `vulnerable-app`. This is accomplished because the `attacker-app` can load the `vulnerable-app` in an `iframe` html element, style the iframe so it's not visible at all (in this case it is somewhat visible for demonstration purposes) and actually a "layer" deep from other html elements within the view, and place "clickbait" type elements on top of the iframe and over the areas the attacker wants the user to click within the iframe instead.
 
+## References/Further Reading
+1. [OWASP](https://www.owasp.org/)
+    1. [Cross-site Scripting Defense Cheat Sheet][1]
+    1. [Cross-site Request Forgery Defense Cheat Sheet][2]
+    1. [Clickjacking Defense Cheat Sheet](https://www.owasp.org/index.php/Clickjacking_Defense_Cheat_Sheet)
+2. [HTML5Rocks - CSP](http://www.html5rocks.com/en/tutorials/security/content-security-policy/)
+3. [Angular $sanitize](https://docs.angularjs.org/api/ngSanitize/service/$sanitize)
+4. [Angular $sce](https://docs.angularjs.org/api/ng/service/$sce)
+5. [xss-filters](https://www.npmjs.com/package/xss-filters)
+6. [lusca](https://www.npmjs.com/package/lusca)
 
+[1]: https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet
+[2]: https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet
 
 -------
 
