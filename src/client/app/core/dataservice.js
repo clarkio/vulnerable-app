@@ -10,10 +10,25 @@
     function dataservice($http, $q, exception, logger) {
         var service = {
             getPeople: getPeople,
-            getMessageCount: getMessageCount
+            getMessageCount: getMessageCount,
+            search: search
         };
 
         return service;
+
+        function search(searchTerm) {
+            return $http.get('/api/search?searchTerm=' + searchTerm)
+                .then(success)
+                .catch(fail);
+
+            function success(response) {
+                return response.data;
+            }
+
+            function fail(e) {
+                return exception.catcher('XHR Failed for search')(e);
+            }
+        }
 
         function getMessageCount() { return $q.when(72); }
 

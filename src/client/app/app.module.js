@@ -5,9 +5,9 @@
         'app.core',
         'app.widgets',
         'app.dashboard',
+        'app.xss-search',
         'app.csrf',
         'app.clickjacking',
-        'app.xss-search',
         'app.layout'
     ]);
 

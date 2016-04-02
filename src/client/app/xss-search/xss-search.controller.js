@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict';
 
     angular
@@ -20,8 +20,15 @@
         }
 
         function search(searchTerm) {
-            // Intentionally trusting as HTML for demonstration purposes
-            vm.searchResults = $sce.trustAsHtml(searchTerm);
+            dataservice.search(searchTerm)
+                .then(function(response) {
+                    // Intentionally trusting as HTML for demonstration purposes
+                    logger.info('Search response: ', response);
+                    vm.searchResults = $sce.trustAsHtml(response);
+                })
+                .catch(function(error) {
+                    logger.error(error);
+                });
         }
     }
 })();

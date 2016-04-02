@@ -12,11 +12,22 @@ router.post('/user/logout', logout);
 router.post('/user/profile/', updateProfile);
 router.get('/user/profile/', getProfile);
 
+router.get('/search', search);
+
 router.get('/*', four0four.notFoundMiddleware);
 
 module.exports = router;
 
 //////////////
+
+function search(req, res, next) {
+    // This would then query against a datastore for the search term
+    // and return the results with the search term used for the query
+
+    // For demo purposes we're just going to send back the search term received
+    console.log(req.query.searchTerm);
+    res.status(200).send(req.query.searchTerm);
+}
 
 function getProfile(req, res, next) {
     console.log('User Requesting Read: ', req.cookies.userAuthToken);
