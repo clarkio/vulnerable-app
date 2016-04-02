@@ -24,9 +24,11 @@ The following steps will demonstrate a simple example of being able to submit re
 
 1. In the tab that's running the `vulnerable-app`, click on the option `CSRF` in the navigation bar and take note of the "User Profile" section within the view
     > By default, the user's "First Name" should show the value of `Jim` and the "Last Name" as the value of `Bob`
+
 2. In the tab that's running the `attacker-app`, click on the option `CSRF-Attack` in the navigation bar. This will immediately execute the CSRF attack and display the forged POST data
 3. Go back to the tab that's running the `vulnerable-app` and make sure you're still in the `CSRF` view
 4. Click the "Get Latest User Profile" button and you should see that the user's profile was changed due to the CSRF attack
+
     > The user's "First Name" should show the value of `Evil` and the "Last Name" as the value of `Hacker` now
 
 ### Clickjacking
@@ -34,8 +36,10 @@ The following steps will demonstrate a simple example of clickjacking by trickin
 
 1. In the tab that's running the `attacker-app`, click on the option `Clickjacking-Attack`
     > You should be able to see that the `vulnerable-app` is loaded in the view, but with a low opacity
+
 2. Open the developer tools for the browser you're using and view the console
 3. Click the "Click to see awesome dog backflips!" button
+
     > You should see a message in the console with the following text: "The profile was successfully deleted!"
 
 This example demonstrates that while the user thinks they're clicking on a button that will show them "awesome dog backflips", they're actually clicking on the "Delete Sensitive Information!" button found in the `vulnerable-app`. This is accomplished because the `attacker-app` can load the `vulnerable-app` in an `iframe` html element, style the iframe so it's not visible at all (in this case it is somewhat visible for demonstration purposes) and actually a "layer" deep from other html elements within the view, and place "clickbait" type elements on top of the iframe and over the areas the attacker wants the user to click within the iframe instead.
