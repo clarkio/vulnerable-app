@@ -23,7 +23,7 @@
                     title: 'Clickjacking',
                     settings: {
                         nav: 1,
-                        content: '<i class="fa fa-clickjacking"></i> Clickjacking'
+                        content: '<i class="fa fa-clickjacking"></i> Delete it All!'
                     }
                 }
             }

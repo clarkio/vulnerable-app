@@ -23,7 +23,7 @@
                     title: 'XSS Search',
                     settings: {
                         nav: 1,
-                        content: '<i class="fa fa-xss-search"></i> XSS Search'
+                        content: '<i class="fa fa-xss-search"></i> Search'
                     }
                 }
             }

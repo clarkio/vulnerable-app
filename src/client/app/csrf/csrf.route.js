@@ -23,7 +23,7 @@
                     title: 'CSRF',
                     settings: {
                         nav: 1,
-                        content: '<i class="fa fa-csrf"></i> CSRF'
+                        content: '<i class="fa fa-csrf"></i> Profile'
                     }
                 }
             }
