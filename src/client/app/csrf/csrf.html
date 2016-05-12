@@ -4,14 +4,14 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="widget wblue">
-                        <div ht-widget-header title="Some Form"
+                        <div ht-widget-header title="Update Profile"
                              allow-collapse="true"></div>
                         <div class="widget-content text-center text-info">
                             <form>
-                                <label>Update Your Profile:</label><br>
-                                <span><label>First Name:<label><input type="text" ng-model="user.firstName"></input></span>
-                                <span><label>Last Name:<label><input type="text" ng-model="user.lastName"></input></span>
-                                <input type="submit" ng-click="vm.updateProfile(user)" value="Submit"></input>
+                                <label>Update Your Profile:</label><br><br>
+                                <span class="pull-left"><label>First Name:<label><input type="text" ng-model="user.firstName"></input></span>
+                                <span class="pull-left"><label>Last Name:<label><input type="text" ng-model="user.lastName"></input></span>
+                                <input type="submit" ng-click="vm.updateProfile(user)" value="Submit"></input><br><br>
                             </form>
                         </div>
                         <div class="widget-foot">
@@ -27,9 +27,9 @@
                             <button ng-click="vm.getProfile()">Get Latest User Profile</button>
                             <br>
                             <br>
-                            <span><label>First Name:<label><label>{{vm.user.firstName}}</label></span>
+                            <label>First Name: {{vm.user.firstName}}</label>
                             <br>
-                            <span><label>Last Name:<label><label>{{vm.user.lastName}}</label></span>
+                            <label>Last Name: {{vm.user.lastName}}</label>
                         </div>
                         <div class="widget-foot">
                             <div class="clearfix"></div>
