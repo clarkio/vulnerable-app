@@ -8,13 +8,13 @@
         </a>
     </div>
     <div class="navbar-collapse collapse">
-        <div class="pull-left">
+        <div class="pull-left navbar-header navbar-brand">
             <div ng-show="vm.isLoggedIn">
                 <span class="user-title">Hello, Brian Clark: {{vm.user}}</span>
-                <button ng-click="vm.logout()">Logout</button>
+                <button class="btn btn-primary btn-xs" ng-click="vm.logout()">Logout</button>
             </div>
             <div ng-show="!vm.isLoggedIn">
-                <button ng-click="vm.login()">Login</button>
+                <button class="btn btn-primary btn-xs" ng-click="vm.login()">Login</button>
             </div>
         </div>
     </div>

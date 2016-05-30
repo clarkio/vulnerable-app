@@ -23,7 +23,7 @@
             dataservice.search(searchTerm)
                 .then(function(response) {
                     // Intentionally trusting as HTML for demonstration purposes
-                    logger.info('Search response: ', response);
+                    console.log('Search response: ', response);
                     vm.searchResults = $sce.trustAsHtml(response);
                 })
                 .catch(function(error) {
