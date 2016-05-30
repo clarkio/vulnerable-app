@@ -3,6 +3,7 @@
 
 var express = require('express');
 var app = express();
+app.disable('x-powered-by');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var favicon = require('serve-favicon');
