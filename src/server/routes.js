@@ -50,7 +50,7 @@ function updateProfile(req, res, next) {
 
 function login(req, res, next) {
     var randomNumber = Math.random().toString();
-    randomNumber = randomNumber.substring(2, randomNumber.length);
+    randomNumber = '35592211433686316';//randomNumber.substring(2, randomNumber.length);
 
     data.randomNumber = randomNumber;
     data.profile[randomNumber] = {
