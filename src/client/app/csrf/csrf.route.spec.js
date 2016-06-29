@@ -14,8 +14,8 @@ describe('csrf routes', function () {
 
         bard.verifyNoOutstandingHttpRequests();
 
-        it('should map state csrf to url / ', function() {
-            expect($state.href('csrf', {})).to.equal('/');
+        it('should map state csrf to url /csrf ', function() {
+            expect($state.href('csrf', {})).to.equal('/csrf');
         });
 
         it('should map /csrf route to csrf View template', function () {

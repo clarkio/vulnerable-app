@@ -14,8 +14,8 @@ describe('clickjacking routes', function () {
 
         bard.verifyNoOutstandingHttpRequests();
 
-        it('should map state clickjacking to url / ', function() {
-            expect($state.href('clickjacking', {})).to.equal('/');
+        it('should map state clickjacking to url /clickjacking ', function() {
+            expect($state.href('clickjacking', {})).to.equal('/clickjacking');
         });
 
         it('should map /clickjacking route to clickjacking View template', function () {

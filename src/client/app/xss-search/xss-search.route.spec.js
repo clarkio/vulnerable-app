@@ -14,8 +14,8 @@ describe('xss-search routes', function () {
 
         bard.verifyNoOutstandingHttpRequests();
 
-        it('should map state xss-search to url / ', function() {
-            expect($state.href('xss-search', {})).to.equal('/');
+        it('should map state xss-search to url /xss-search ', function() {
+            expect($state.href('xss-search', {})).to.equal('/xss-search');
         });
 
         it('should map /xss-search route to xss-search View template', function () {
