@@ -4,6 +4,7 @@ There are two applications within this repository that were generated from the H
 ## Requirements
 1. Node.js v4.2.x
 2. NPM v3.10.x
+
 > Straying from these versions may result in unanticipated behavior and it cannot be guaranteed the app will produce the expected results.
 
 ## How to Run Both Apps
