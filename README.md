@@ -8,7 +8,7 @@ There are two applications within this repository that were generated from the H
 > Straying from these versions may result in unanticipated behavior and it cannot be guaranteed the app will produce the expected results.
 
 ## Node Dependencies Check for Vulnerabilities
-![nsp](https://nodesecurity.io/orgs/clarkio/projects/e2bea8dd-2281-4f8d-b6a8-76804791377e/badge)
+[![NSP Status](https://nodesecurity.io/orgs/clarkio/projects/e2bea8dd-2281-4f8d-b6a8-76804791377e/badge)](https://nodesecurity.io/orgs/clarkio/projects/e2bea8dd-2281-4f8d-b6a8-76804791377e)
 
 ## How to Run Both Apps
 1. Open your terminal and `cd` to the root folder for this repository
