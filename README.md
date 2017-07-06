@@ -2,8 +2,8 @@
 There are two applications within this repository that were generated from the HotTowel Angular generator. The main one is the `vulnerable-app` which is found in the `/src` folder. This application was built intentionally built out with vulnerabilities to easily demonstrate how they are performed by an attacker. The secondary application is the `attacker-app` found in the `/attacker-app` folder and it was built out to assist in demonstrating an attacker's website that is exploiting the vulnerabilities in the `vulnerable-app`.
 
 ## Requirements
-1. Node.js v4.2.x
-2. NPM v3.10.x
+1. [Node.js v6.11.0](https://nodejs.org/en/download/)
+2. [NPM v5.1.0](https://docs.npmjs.com/getting-started/installing-node)
 
 > Straying from these versions may result in unanticipated behavior and it cannot be guaranteed the app will produce the expected results.
 
@@ -12,11 +12,14 @@ There are two applications within this repository that were generated from the H
 
 ## How to Run Both Apps
 1. Open your terminal and `cd` to the root folder for this repository
-2. Run `gulp serve-dev` to spin up the `vulnerable-app`
-3. You should see your browser open up a new tab to the following URL: [http://localhost:3000](http://localhost:3000)
-4. Open a new terminal window or tab and `cd` to the `/attacker-app` folder from the root location of this repository
-5. Run `gulp serve-dev`
-6. You should see your browser open up another new tab to the following URL: [http://localhost:3002](http://localhost:3002)
+2. Execute `npm install -g bower gulp nodemon`
+3. Execute `npm install`
+4. Execute `bower install`
+5. Run `gulp serve-dev` to spin up the `vulnerable-app`
+6. You should see your browser open up a new tab to the following URL: [http://localhost:3000](http://localhost:3000)
+7. Open a new terminal window or tab and `cd` to the `/attacker-app` folder from the root location of this repository
+8. Run `gulp serve-dev`
+9. You should see your browser open up another new tab to the following URL: [http://localhost:3002](http://localhost:3002)
 
 ## How to Test
 
